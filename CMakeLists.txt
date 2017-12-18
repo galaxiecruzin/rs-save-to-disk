@@ -18,7 +18,7 @@ endif()
 
 # save-to-disk
 add_executable(rs-save-to-disk rs-save-to-disk.cpp)
-target_link_libraries(rs-save-to-disk realsense2 ${DEPENDENCIES})
+target_link_libraries(rs-save-to-disk realsense2 ${DEPENDENCIES} -pthread)
 include_directories(rs-save-to-disk ../librealsense/common ../librealsense/tclap/include ../librealsense/third-party)
 set_target_properties (rs-save-to-disk PROPERTIES
     FOLDER "Examples"
